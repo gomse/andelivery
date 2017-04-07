@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: #eaeaea;
+  color: black;
+}
+
+body, input, label, textarea {
+  font-family: 'Nanum Gothic', serif;
+  font-size: 16px;
+}
+
+.body-wrapper {
+  margin-top: 50px;
+}
+
+.notice {
+  color: red;
+  font-size: 12px;
+}
+
+.copyright {
+  font-size: 14px;
+  font-style: italic;
+}

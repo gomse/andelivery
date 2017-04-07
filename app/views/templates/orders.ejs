@@ -1,0 +1,28 @@
+<form class="form-inline" ng-submit="order()">
+  <div class="form-group">
+    <input type="text" class="form-control" size=15 ng-model="buyer" placeholder="주문자" />
+    <input type="text" class="form-control" size=25 ng-model="product" placeholder="상품명" />
+    <input type="text" class="form-control" size=40 ng-model="description" placeholder="배송 메시지" />
+    <button type="submit" class="btn btn-success">주문</button>
+    <button type="button" class="btn btn-warning" ng-click="refresh()">새로고침</button>
+  </div>
+</form>
+<hr />
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th>주문자</th>
+    <th>상품</th>
+    <th>메시지</th>
+    <th>주문일</th>
+  </tr>
+</thead>
+<tbody>
+  <tr ng-repeat="order in orders.slice().reverse()">
+    <td>{{order.buyer}}</td>
+    <td>{{order.product}}</td>
+    <td>{{order.description}}</td>
+    <td>{{order.createdAt | moment:'YYYY/MM/DD H:m'}}</td>
+  </tr>
+</tbody>
+</table>
